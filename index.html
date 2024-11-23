@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Instagram Photo Feed with Bootstrap</title>
+
+<head>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+    <!-- My CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <header class="sticky-top">
+        <div class="navbar navbar-light navbar-expand-lg bg-light">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-1" href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav ms-auto d-flex my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <div class="btn-group" role="group">
+                                <!-- Green button -->
+                                <button type="button" class="btn btn-success rounded-end" data-bs-toggle="modal" data-bs-target="#createPostModal">
+                                    Create a New Post
+                                </button>
+                    
+                                <!-- Gear icon with dropdown -->
+                                <button type="button" class="btn btn-secondary dropdown-toggle d-flex align-items-center ms-2 rounded-start" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-gear-fill text-white me-1"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="container">
+        <!-- Create a new post Modal -->
+        <div class="modal" id="createPostModal" tabindex="-1">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Create a new post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                        <label for="postCaption" class="form-label">Caption:</label>
+                        <textarea class="form-control" id="postCaption" name="postCaption" rows="2" placeholder="Add the caption of your post here" aria-describedby="emailHelp"></textarea>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-light captionButton">
+                                <i class="fa-solid fa-camera"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-light captionButton">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+            </div>
+        </div> 
+
+        <!-- Posts (both side-by-side and stacked)-->
+        <div class="d-flex flex-column align-items-center vh-100 text-center">
+            <div class="container text-center">
+                <!-- Nav Tabs -->
+                <ul class="nav justify-content-center" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="sideBySide-tab" data-bs-toggle="tab" href="#sideBySideLayout" role="tab" aria-controls="sideBySideLayout" aria-selected="true">
+                            <i class="fas fa-th"></i> 
+                        </a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link bg-transparent" id="stacked-tab" data-bs-toggle="tab" href="#stackedLayout" role="tab" aria-controls="stackedLayout" aria-selected="false">
+                            <i class="fa-solid fa-list"></i>
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Tab Content -->
+                <div class="tab-content mt-3" id="myTabContent">
+                    <!-- Side-by-Side Layout -->
+                    <div class="container py-4 grid-container tab-pane fade show active" id="sideBySideLayout" role="tabpanel" aria-labelledby="sideBySide-tab">
+                        <div class="row g-3 mb-3">
+                            <div class="col-4">
+                                <div class="square-container">
+                                    <img src="images/image01.jpeg" alt="Example Image 1">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="square-container">
+                                    <img src="images/image02.jpeg" alt="Example Image 2">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="square-container">
+                                    <img src="images/image03.jpeg" alt="Example Image 3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-4">
+                                <div class="square-container">
+                                    <img src="images/image04.jpeg" alt="Example Image 1">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="square-container">
+                                    <img src="images/image05.jpeg" alt="Example Image 2">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="square-container">
+                                    <img src="images/image06.jpeg" alt="Example Image 3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-4">
+                                <div class="square-container">
+                                    <img src="images/image07.jpeg" alt="Example Image 1">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="square-container">
+                                    <img src="images/image08.jpeg" alt="Example Image 2">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="square-container">
+                                    <img src="images/image09.jpeg" alt="Example Image 3">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-3 mb-3">
+                            <div class="col-4">
+                                <div class="square-container">
+                                    <img src="images/image10.jpeg" alt="Example Image 1">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="square-container">
+                                    <img src="images/image11.jpeg" alt="Example Image 2">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="square-container">
+                                    <img src="images/image12.jpeg" alt="Example Image 3">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Stacked Layout -->
+                    <div class="container tab-pane fade" id="stackedLayout" role="tabpanel" aria-labelledby="stacked-tab">
+                        <H1>This is the stacked list!</H1>
+                    </div>
+                </div>
+            </div>
+        </div>    
+  </main>
+
+  
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+</body>
+</html>
