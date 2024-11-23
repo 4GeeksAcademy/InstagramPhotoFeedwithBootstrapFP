@@ -27,24 +27,29 @@
     <header class="sticky-top">
         <div class="navbar navbar-light navbar-expand-lg bg-light">
             <div class="container">
+                <!-- Brand -->
                 <a class="navbar-brand d-flex align-items-center gap-1" href="#">
                     <i class="fa-brands fa-instagram"></i>
                     <span>Instagram</span>
                 </a>
+    
+                <!-- Hamburger Button -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+    
+                <!-- Collapsible Content -->
                 <div class="collapse navbar-collapse" id="navbarScroll">
-                    <ul class="navbar-nav ms-auto d-flex my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <!-- Visible on large screens -->
-                        <li class="nav-item d-none d-lg-block">
-                            <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#createPostModal">
+                    <!-- Large Screen Options -->
+                    <ul class="navbar-nav ms-auto d-none d-lg-flex align-items-center">
+                        <li class="nav-item me-3">
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createPostModal">
                                 Create a New Post
                             </button>
                         </li>
-                        <li class="nav-item dropdown d-none d-lg-block">
-                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="bi bi-gear-fill"></i>
+                        <li class="nav-item dropdown">
+                            <button type="button" class="btn btn-secondary dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-gear-fill text-white me-1"></i>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
                                 <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -54,33 +59,36 @@
                                 <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
                             </ul>
                         </li>
+                    </ul>
     
-                        <!-- Visible on smaller screens -->
-                        <li class="nav-item d-lg-none">
-                            <button type="button" class="btn btn-success w-100 mb-2" data-bs-toggle="modal" data-bs-target="#createPostModal">
+                    <!-- Small Screen Options -->
+                    <ul class="navbar-nav ms-auto d-lg-none align-items-end mt-3">
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createPostModal">
                                 Create a New Post
                             </button>
                         </li>
-                        <li class="nav-item d-lg-none">
-                            <a class="dropdown-item" href="#">Profile</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Profile</a>
                         </li>
-                        <li class="nav-item d-lg-none">
-                            <a class="dropdown-item" href="#">Accessibility</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Accessibility</a>
                         </li>
-                        <li class="nav-item d-lg-none">
-                            <a class="dropdown-item" href="#">Privacy and Data</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Privacy and Data</a>
                         </li>
-                        <li class="nav-item d-lg-none">
+                        <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li class="nav-item d-lg-none">
-                            <a class="dropdown-item text-danger" href="#">Log out</a>
+                        <li class="nav-item">
+                            <a class="nav-link text-danger" href="#">Log out</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
+    
     
     
 
