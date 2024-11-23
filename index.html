@@ -36,31 +36,53 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav ms-auto d-flex my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                        <li class="nav-item">
-                            <div class="btn-group" role="group">
-                                <!-- Green button -->
-                                <button type="button" class="btn btn-success rounded-end" data-bs-toggle="modal" data-bs-target="#createPostModal">
-                                    Create a New Post
-                                </button>
-                    
-                                <!-- Gear icon with dropdown -->
-                                <button type="button" class="btn btn-secondary dropdown-toggle d-flex align-items-center ms-2 rounded-start" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-gear-fill text-white me-1"></i>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                                    <li><a class="dropdown-item" href="#">Accessibility</a></li>
-                                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-                                </ul>
-                            </div>
+                        <!-- Visible on large screens -->
+                        <li class="nav-item d-none d-lg-block">
+                            <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#createPostModal">
+                                Create a New Post
+                            </button>
+                        </li>
+                        <li class="nav-item dropdown d-none d-lg-block">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-gear-fill"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                                <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                            </ul>
+                        </li>
+    
+                        <!-- Visible on smaller screens -->
+                        <li class="nav-item d-lg-none">
+                            <button type="button" class="btn btn-success w-100 mb-2" data-bs-toggle="modal" data-bs-target="#createPostModal">
+                                Create a New Post
+                            </button>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="dropdown-item" href="#">Profile</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="dropdown-item" href="#">Accessibility</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="dropdown-item" href="#">Privacy and Data</a>
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li class="nav-item d-lg-none">
+                            <a class="dropdown-item text-danger" href="#">Log out</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
+    
+    
 
 
     <main class="container">
@@ -189,7 +211,152 @@
                     
                     <!-- Stacked Layout -->
                     <div class="container tab-pane fade" id="stackedLayout" role="tabpanel" aria-labelledby="stacked-tab">
-                        <H1>This is the stacked list!</H1>
+                        <div class="d-flex flex-column align-items-center">  
+                            <!-- Card 1 -->
+                            <div class="card mb-3" style="max-width: 600px; width:100%">
+                                <div class="card-header d-flex justify-content-between align-items-end">
+                                    <h3 class="mb-0">Image 1</h3>
+                                    <p class="mb-0">12/24</p>
+                                </div>
+                                <img src="images/image01.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body text-start">
+                                    <p class="text-start m-0"><strong>205 likes</strong></p>
+                                    <p class="text-start m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                             <!-- Card 2 -->
+                             <div class="card mb-3" style="max-width: 600px; width:100%">
+                                <div class="card-header d-flex justify-content-between align-items-end">
+                                    <h3 class="mb-0">Image 2</h3>
+                                    <p class="mb-0">12/24</p>
+                                </div>
+                                <img src="images/image02.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body text-start">
+                                    <p class="text-start m-0"><strong>205 likes</strong></p>
+                                    <p class="text-start m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div class="card mb-3" style="max-width: 600px; width:100%">
+                                <div class="card-header d-flex justify-content-between align-items-end">
+                                    <h3 class="mb-0">Image 3</h3>
+                                    <p class="mb-0">12/24</p>
+                                </div>
+                                <img src="images/image03.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body text-start">
+                                    <p class="text-start m-0"><strong>205 likes</strong></p>
+                                    <p class="text-start m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <!-- Card 4 -->
+                            <div class="card mb-3" style="max-width: 600px; width:100%">
+                                <div class="card-header d-flex justify-content-between align-items-end">
+                                    <h3 class="mb-0">Image 4</h3>
+                                    <p class="mb-0">12/24</p>
+                                </div>
+                                <img src="images/image04.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body text-start">
+                                    <p class="text-start m-0"><strong>205 likes</strong></p>
+                                    <p class="text-start m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <!-- Card 5 -->
+                            <div class="card mb-3" style="max-width: 600px; width:100%">
+                                <div class="card-header d-flex justify-content-between align-items-end">
+                                    <h3 class="mb-0">Image 5</h3>
+                                    <p class="mb-0">12/24</p>
+                                </div>
+                                <img src="images/image05.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body text-start">
+                                    <p class="text-start m-0"><strong>205 likes</strong></p>
+                                    <p class="text-start m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <!-- Card 6 -->
+                            <div class="card mb-3" style="max-width: 600px; width:100%">
+                                <div class="card-header d-flex justify-content-between align-items-end">
+                                    <h3 class="mb-0">Image 6</h3>
+                                    <p class="mb-0">12/24</p>
+                                </div>
+                                <img src="images/image06.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body text-start">
+                                    <p class="text-start m-0"><strong>205 likes</strong></p>
+                                    <p class="text-start m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <!-- Card 7 -->
+                            <div class="card mb-3" style="max-width: 600px; width:100%">
+                                <div class="card-header d-flex justify-content-between align-items-end">
+                                    <h3 class="mb-0">Image 7</h3>
+                                    <p class="mb-0">12/24</p>
+                                </div>
+                                <img src="images/image07.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body text-start">
+                                    <p class="text-start m-0"><strong>205 likes</strong></p>
+                                    <p class="text-start m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <!-- Card 8 -->
+                            <div class="card mb-3" style="max-width: 600px; width:100%">
+                                <div class="card-header d-flex justify-content-between align-items-end">
+                                    <h3 class="mb-0">Image 8</h3>
+                                    <p class="mb-0">12/24</p>
+                                </div>
+                                <img src="images/image08.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body text-start">
+                                    <p class="text-start m-0"><strong>205 likes</strong></p>
+                                    <p class="text-start m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <!-- Card 9 -->
+                            <div class="card mb-3" style="max-width: 600px; width:100%">
+                                <div class="card-header d-flex justify-content-between align-items-end">
+                                    <h3 class="mb-0">Image 9</h3>
+                                    <p class="mb-0">12/24</p>
+                                </div>
+                                <img src="images/image09.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body text-start">
+                                    <p class="text-start m-0"><strong>205 likes</strong></p>
+                                    <p class="text-start m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <!-- Card 10 -->
+                            <div class="card mb-3" style="max-width: 600px; width:100%">
+                                <div class="card-header d-flex justify-content-between align-items-end">
+                                    <h3 class="mb-0">Image 10</h3>
+                                    <p class="mb-0">12/24</p>
+                                </div>
+                                <img src="images/image10.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body text-start">
+                                    <p class="text-start m-0"><strong>205 likes</strong></p>
+                                    <p class="text-start m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <!-- Card 11 -->
+                            <div class="card mb-3" style="max-width: 600px; width:100%">
+                                <div class="card-header d-flex justify-content-between align-items-end">
+                                    <h3 class="mb-0">Image 11</h3>
+                                    <p class="mb-0">12/24</p>
+                                </div>
+                                <img src="images/image11.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body text-start">
+                                    <p class="text-start m-0"><strong>205 likes</strong></p>
+                                    <p class="text-start m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                            <!-- Card 12 -->
+                            <div class="card mb-3" style="max-width: 600px; width:100%">
+                                <div class="card-header d-flex justify-content-between align-items-end">
+                                    <h3 class="mb-0">Image 12</h3>
+                                    <p class="mb-0">12/24</p>
+                                </div>
+                                <img src="images/image12.jpeg" class="card-img-top" alt="...">
+                                <div class="card-body text-start">
+                                    <p class="text-start m-0"><strong>205 likes</strong></p>
+                                    <p class="text-start m-0">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
